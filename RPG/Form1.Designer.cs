@@ -41,29 +41,32 @@ namespace RPG
       this.label5 = new System.Windows.Forms.Label();
       this.textBox6 = new System.Windows.Forms.TextBox();
       this.label6 = new System.Windows.Forms.Label();
-      this.button1 = new System.Windows.Forms.Button();
-      this.button2 = new System.Windows.Forms.Button();
+      this.btn_Confirm = new System.Windows.Forms.Button();
+      this.btn_Roll = new System.Windows.Forms.Button();
+      this.btn_Reset = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // label1
       // 
       this.label1.AutoSize = true;
-      this.label1.Location = new System.Drawing.Point(98, 46);
+      this.label1.Location = new System.Drawing.Point(26, 42);
       this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(35, 13);
+      this.label1.Size = new System.Drawing.Size(67, 13);
       this.label1.TabIndex = 0;
-      this.label1.Text = "label1";
+      this.label1.Text = "STRENGTH";
       // 
       // textBox1
       // 
-      this.textBox1.Location = new System.Drawing.Point(161, 39);
+      this.textBox1.Enabled = false;
+      this.textBox1.Location = new System.Drawing.Point(141, 39);
       this.textBox1.Name = "textBox1";
       this.textBox1.Size = new System.Drawing.Size(100, 20);
       this.textBox1.TabIndex = 1;
       // 
       // textBox2
       // 
-      this.textBox2.Location = new System.Drawing.Point(161, 92);
+      this.textBox2.Enabled = false;
+      this.textBox2.Location = new System.Drawing.Point(141, 92);
       this.textBox2.Name = "textBox2";
       this.textBox2.Size = new System.Drawing.Size(100, 20);
       this.textBox2.TabIndex = 3;
@@ -71,15 +74,16 @@ namespace RPG
       // label2
       // 
       this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(98, 99);
+      this.label2.Location = new System.Drawing.Point(26, 95);
       this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(35, 13);
+      this.label2.Size = new System.Drawing.Size(68, 13);
       this.label2.TabIndex = 2;
-      this.label2.Text = "label2";
+      this.label2.Text = "DEXTERITY";
       // 
       // textBox3
       // 
-      this.textBox3.Location = new System.Drawing.Point(161, 147);
+      this.textBox3.Enabled = false;
+      this.textBox3.Location = new System.Drawing.Point(141, 147);
       this.textBox3.Name = "textBox3";
       this.textBox3.Size = new System.Drawing.Size(100, 20);
       this.textBox3.TabIndex = 5;
@@ -87,15 +91,16 @@ namespace RPG
       // label3
       // 
       this.label3.AutoSize = true;
-      this.label3.Location = new System.Drawing.Point(98, 154);
+      this.label3.Location = new System.Drawing.Point(26, 150);
       this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(35, 13);
+      this.label3.Size = new System.Drawing.Size(88, 13);
       this.label3.TabIndex = 4;
-      this.label3.Text = "label3";
+      this.label3.Text = "CONSTITUTION";
       // 
       // textBox4
       // 
-      this.textBox4.Location = new System.Drawing.Point(161, 201);
+      this.textBox4.Enabled = false;
+      this.textBox4.Location = new System.Drawing.Point(141, 201);
       this.textBox4.Name = "textBox4";
       this.textBox4.Size = new System.Drawing.Size(100, 20);
       this.textBox4.TabIndex = 7;
@@ -103,15 +108,16 @@ namespace RPG
       // label4
       // 
       this.label4.AutoSize = true;
-      this.label4.Location = new System.Drawing.Point(98, 208);
+      this.label4.Location = new System.Drawing.Point(26, 204);
       this.label4.Name = "label4";
-      this.label4.Size = new System.Drawing.Size(35, 13);
+      this.label4.Size = new System.Drawing.Size(84, 13);
       this.label4.TabIndex = 6;
-      this.label4.Text = "label4";
+      this.label4.Text = "INTELLIGENCE";
       // 
       // textBox5
       // 
-      this.textBox5.Location = new System.Drawing.Point(161, 255);
+      this.textBox5.Enabled = false;
+      this.textBox5.Location = new System.Drawing.Point(141, 255);
       this.textBox5.Name = "textBox5";
       this.textBox5.Size = new System.Drawing.Size(100, 20);
       this.textBox5.TabIndex = 9;
@@ -119,15 +125,16 @@ namespace RPG
       // label5
       // 
       this.label5.AutoSize = true;
-      this.label5.Location = new System.Drawing.Point(98, 262);
+      this.label5.Location = new System.Drawing.Point(26, 258);
       this.label5.Name = "label5";
-      this.label5.Size = new System.Drawing.Size(35, 13);
+      this.label5.Size = new System.Drawing.Size(53, 13);
       this.label5.TabIndex = 8;
-      this.label5.Text = "label5";
+      this.label5.Text = "WISDOM";
       // 
       // textBox6
       // 
-      this.textBox6.Location = new System.Drawing.Point(161, 303);
+      this.textBox6.Enabled = false;
+      this.textBox6.Location = new System.Drawing.Point(141, 303);
       this.textBox6.Name = "textBox6";
       this.textBox6.Size = new System.Drawing.Size(100, 20);
       this.textBox6.TabIndex = 11;
@@ -135,37 +142,51 @@ namespace RPG
       // label6
       // 
       this.label6.AutoSize = true;
-      this.label6.Location = new System.Drawing.Point(98, 310);
+      this.label6.Location = new System.Drawing.Point(26, 306);
       this.label6.Name = "label6";
-      this.label6.Size = new System.Drawing.Size(35, 13);
+      this.label6.Size = new System.Drawing.Size(63, 13);
       this.label6.TabIndex = 10;
-      this.label6.Text = "label6";
+      this.label6.Text = "CHARISMA";
       // 
-      // button1
+      // btn_Confirm
       // 
-      this.button1.Location = new System.Drawing.Point(586, 400);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(75, 23);
-      this.button1.TabIndex = 12;
-      this.button1.Text = "button1";
-      this.button1.UseVisualStyleBackColor = true;
+      this.btn_Confirm.Enabled = false;
+      this.btn_Confirm.Location = new System.Drawing.Point(586, 400);
+      this.btn_Confirm.Name = "btn_Confirm";
+      this.btn_Confirm.Size = new System.Drawing.Size(75, 23);
+      this.btn_Confirm.TabIndex = 12;
+      this.btn_Confirm.Text = "Confirm";
+      this.btn_Confirm.UseVisualStyleBackColor = true;
+      this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
       // 
-      // button2
+      // btn_Roll
       // 
-      this.button2.Location = new System.Drawing.Point(352, 36);
-      this.button2.Name = "button2";
-      this.button2.Size = new System.Drawing.Size(75, 23);
-      this.button2.TabIndex = 13;
-      this.button2.Text = "button2";
-      this.button2.UseVisualStyleBackColor = true;
+      this.btn_Roll.Location = new System.Drawing.Point(284, 36);
+      this.btn_Roll.Name = "btn_Roll";
+      this.btn_Roll.Size = new System.Drawing.Size(75, 23);
+      this.btn_Roll.TabIndex = 13;
+      this.btn_Roll.Text = "Roll";
+      this.btn_Roll.UseVisualStyleBackColor = true;
+      this.btn_Roll.Click += new System.EventHandler(this.button2_Click);
+      // 
+      // btn_Reset
+      // 
+      this.btn_Reset.Location = new System.Drawing.Point(458, 400);
+      this.btn_Reset.Name = "btn_Reset";
+      this.btn_Reset.Size = new System.Drawing.Size(75, 23);
+      this.btn_Reset.TabIndex = 14;
+      this.btn_Reset.Text = "Reset";
+      this.btn_Reset.UseVisualStyleBackColor = true;
+      this.btn_Reset.Click += new System.EventHandler(this.button3_Click);
       // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
-      this.Controls.Add(this.button2);
-      this.Controls.Add(this.button1);
+      this.Controls.Add(this.btn_Reset);
+      this.Controls.Add(this.btn_Roll);
+      this.Controls.Add(this.btn_Confirm);
       this.Controls.Add(this.textBox6);
       this.Controls.Add(this.label6);
       this.Controls.Add(this.textBox5);
@@ -199,8 +220,9 @@ namespace RPG
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.TextBox textBox6;
     private System.Windows.Forms.Label label6;
-    private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Button btn_Confirm;
+    private System.Windows.Forms.Button btn_Roll;
+    private System.Windows.Forms.Button btn_Reset;
   }
 }
 
