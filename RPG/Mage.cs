@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG
 {
-  class Warrior : Player
+  class Mage : Player
   {
   }
 }

@@ -68,6 +68,7 @@ namespace RPG
     {
       if (numOfResets > 0)
       {
+        listBox1.Visible = false;
         index = 0;
         textBox1.Text = "";
         textBox2.Text = "";
@@ -83,15 +84,62 @@ namespace RPG
 
     private void btn_Confirm_Click(object sender, EventArgs e)
     {
-      Player p = new Player(
-        int.Parse(textBox1.Text),
-        int.Parse(textBox2.Text),
-        int.Parse(textBox3.Text),
-        int.Parse(textBox4.Text),
-        int.Parse(textBox5.Text),
-        int.Parse(textBox6.Text)
-        );
-    
+      if (!listBox1.Visible) //(listBox1.Visible == false)
+      {
+        if (listBox1.Items.Count > 0)
+        { 
+          listBox1.Items.Clear(); 
+        }
+        Player p = new Player(
+          int.Parse(textBox1.Text),
+          int.Parse(textBox2.Text),
+          int.Parse(textBox3.Text),
+          int.Parse(textBox4.Text),
+          int.Parse(textBox5.Text),
+          int.Parse(textBox6.Text)
+          );
+        listBox1.Visible = true;
+
+        if (int.Parse(textBox1.Text) >= 9)
+        {
+          listBox1.Items.Add("Fighter");
+        }
+        if (int.Parse(textBox2.Text) >= 9)
+        {
+          listBox1.Items.Add("Thief");
+        }
+        if (int.Parse(textBox4.Text) >= 9)
+        {
+          listBox1.Items.Add("Mage");
+        }
+        if (int.Parse(textBox5.Text) >= 9)
+        {
+          listBox1.Items.Add("Priest");
+        }
+      }
+      else
+      {
+        if(listBox1.Text == "Mage")
+        {
+          Mage player = new Mage();
+        }
+        else if (listBox1.Text == "Warrior")
+        {
+          Warrior player = new Warrior();
+        }
+        else if (listBox1.Text == "Thief")
+        {
+          Thief player = new Thief();
+        }
+        else if (listBox1.Text == "Priest")
+        {
+          Priest player = new Priest();
+        }
+        else
+        {
+          MessageBox.Show("No class selected");
+        }
+      }
     }
   }
 }
