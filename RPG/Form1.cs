@@ -138,6 +138,7 @@ namespace RPG
         else
         {
           MessageBox.Show("No class selected");
+          //
         }
       }
     }
