@@ -8,5 +8,6 @@ namespace RPG
 {
   class Thief : Player
   {
+    public int PP, OL, MS, HS, FRT, RL, CW, DN;
   }
 }
